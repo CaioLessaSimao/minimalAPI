@@ -1,0 +1,28 @@
+@minimalAPI_HostAddress = http://localhost:5266
+
+POST {{minimalAPI_HostAddress}}/enderecos
+Content-Type: application/json
+
+{
+  "logradouro": "Rua das Flores",
+  "numero": "123",
+  "uf": "SP",
+  "cidade": "São Paulo",
+  "bairro": "Centro",
+  "PessoaID": "1"
+}
+###
+POST {{minimalAPI_HostAddress}}/pessoas
+Content-Type: application/json
+
+{
+"nome": "Maria Silva",
+"idade": 30,
+"email": "maria@example.com"
+}
+
+###
+
+GET {{minimalAPI_HostAddress}}/pessoas/1
+Accept: application/json
+
